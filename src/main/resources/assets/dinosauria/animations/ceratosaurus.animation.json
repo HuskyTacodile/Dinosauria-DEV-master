@@ -1,0 +1,276 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cerato.idle": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"Tailbase": {
+					"rotation": {
+						"vector": [0, "0+math.sin(-90+query.anim_time*100)*3.5", 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.2", 0]
+					}
+				},
+				"Tail": {
+					"rotation": {
+						"vector": [-12.5, "math.sin(-90+query.anim_time*100)*3.5", 0]
+					}
+				},
+				"Neck": {
+					"rotation": {
+						"vector": ["math.cos(query.anim_time*100)*1.1", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Jaw": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"bone": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				}
+			}
+		},
+		"animation.cerato.sit": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"Tailbase": {
+					"rotation": {
+						"vector": [-7.5, "math.sin(-90+query.anim_time*100)*0.5", 0]
+					}
+				},
+				"Tail": {
+					"rotation": {
+						"vector": [-14.69689, "-37.4938+math.sin(-90+query.anim_time*100)*0.5", -0.75814]
+					}
+				},
+				"Neck": {
+					"rotation": {
+						"vector": ["math.cos(query.anim_time*100)*1.1", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Jaw": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"bone": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Body": {
+					"position": {
+						"vector": [0, -15, 0]
+					}
+				},
+				"Thigright": {
+					"rotation": {
+						"vector": [-450, 32.5, -360]
+					},
+					"position": {
+						"vector": [0, -3, 4]
+					}
+				},
+				"Thigleft": {
+					"rotation": {
+						"vector": [-93.05099, -34.96182, 1.74942]
+					},
+					"position": {
+						"vector": [0, -3, 5]
+					}
+				},
+				"armleft": {
+					"rotation": {
+						"vector": [76.69652, 3.56856, -7.35815]
+					}
+				},
+				"armright": {
+					"rotation": {
+						"vector": [76.64417, -6.16335, -5.05479]
+					}
+				},
+				"Feetright": {
+					"rotation": {
+						"vector": [85, 0, 0]
+					}
+				},
+				"Feetleft": {
+					"rotation": {
+						"vector": [92.5, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.cerato.sit2": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"Tailbase": {
+					"rotation": {
+						"vector": [-7.5, "math.sin(-90+query.anim_time*100)*0.5", 0]
+					}
+				},
+				"Tail": {
+					"rotation": {
+						"vector": [-14.69689, "-37.4938+math.sin(-90+query.anim_time*100)*0.5", -0.75814]
+					}
+				},
+				"Neck": {
+					"rotation": {
+						"vector": ["50.2781+math.cos(query.anim_time*20)*0.0", -11.94415, 85.07119]
+					},
+					"position": {
+						"vector": [0, "-2+math.sin(query.anim_time*100)*0.2", 0]
+					}
+				},
+				"Jaw": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"bone": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Body": {
+					"position": {
+						"vector": [0, -15, 0]
+					}
+				},
+				"Thigright": {
+					"rotation": {
+						"vector": [-450, 32.5, -360]
+					},
+					"position": {
+						"vector": [0, -3, 4]
+					}
+				},
+				"Thigleft": {
+					"rotation": {
+						"vector": [-93.05099, -34.96182, 1.74942]
+					},
+					"position": {
+						"vector": [0, -3, 5]
+					}
+				},
+				"armleft": {
+					"rotation": {
+						"vector": [76.69652, 3.56856, -7.35815]
+					}
+				},
+				"armright": {
+					"rotation": {
+						"vector": [76.64417, -6.16335, -5.05479]
+					}
+				},
+				"Feetright": {
+					"rotation": {
+						"vector": [85, 0, 0]
+					}
+				},
+				"Feetleft": {
+					"rotation": {
+						"vector": [92.5, 0, 0]
+					}
+				},
+				"Head": {
+					"rotation": {
+						"vector": [-0.48397, 9.0898, -4.20073]
+					}
+				}
+			}
+		},
+		"animation.cerato.walk": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"Tailbase": {
+					"rotation": {
+						"vector": ["0+math.sin(-90+query.anim_time*400)*3.5", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.2", 0]
+					}
+				},
+				"Tail": {
+					"rotation": {
+						"vector": ["-12.5+math.sin(-90+query.anim_time*400)*3.5", 0, 0]
+					}
+				},
+				"Neck": {
+					"rotation": {
+						"vector": ["math.cos(query.anim_time*400)*1.1", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Jaw": {
+					"rotation": {
+						"vector": [-45, 0, 0]
+					}
+				},
+				"bone": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*400)*0.3", 0]
+					}
+				},
+				"Thigright": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time*300)*20", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Legright": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time*300)*20", 0, 0]
+					}
+				},
+				"Thigleft": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time*300)*-20", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*100)*0.3", 0]
+					}
+				},
+				"Legleft": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time*300)*-20", 0, 0]
+					}
+				},
+				"armleft": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time*500)*1.9", 0, 0]
+					}
+				},
+				"armright": {
+					"rotation": {
+						"vector": ["math.sin(query.anim_time*500)*1.9", 0, 0]
+					}
+				},
+				"Head": {
+					"rotation": {
+						"vector": ["math.cos(query.anim_time*400)*1.1", 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
