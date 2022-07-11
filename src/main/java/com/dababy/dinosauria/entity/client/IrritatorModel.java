@@ -8,17 +8,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class IrritatorModel extends AnimatedGeoModel<IrritatorEntity> {
     @Override
-    public ResourceLocation getModelLocation(IrritatorEntity object) {
+    public ResourceLocation getModelResource(IrritatorEntity object) {
         return new ResourceLocation(DinosauriaMod.MOD_ID, "geo/irritator.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureLocation(IrritatorEntity entity)    {
+    public ResourceLocation getTextureResource(IrritatorEntity entity)    {
         return DilophosaurusRenderer.LOCATION_BY_VARIANT.get(entity.getVariant());
     }
 
     @Override
-    public ResourceLocation getAnimationFileLocation(IrritatorEntity animatable) {
+    public ResourceLocation getAnimationResource(IrritatorEntity animatable) {
         return new ResourceLocation(DinosauriaMod.MOD_ID, "animations/irritator.animation.json");
     }
 }

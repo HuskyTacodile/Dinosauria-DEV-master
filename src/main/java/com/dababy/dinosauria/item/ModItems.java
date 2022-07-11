@@ -17,7 +17,37 @@ public class ModItems {
     public static final RegistryObject<Item> DILOPHOSAURUS_SKULL = ITEMS.register("dilophosaurus_skull",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
 
-    public static final RegistryObject<Item> FOSSILIZED_DILOPHOSAURUS_SKULL = ITEMS.register("fossilized_dilophosaurus_skull",
+    public static final RegistryObject<Item> ANKYLOSAURUS_SKULL = ITEMS.register("ankylosaurus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> ANTEOSAURUS_SKULL = ITEMS.register("anteosaurus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> CERATOSAURUS_SKULL = ITEMS.register("ceratosaurus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> DASPLETOSAURUS_SKULL = ITEMS.register("daspletosaurus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> DEINONYCHUS_SKULL = ITEMS.register("deinonychus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> GRYPOSAURUS_SKULL = ITEMS.register("gryposaurus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> IRRITATOR_SKULL = ITEMS.register("irritator_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> PENTACERATOPS_SKULL = ITEMS.register("pentaceratops_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> PLIOSAURUS_SKULL = ITEMS.register("pliosaurus_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> SINOSAUROPTERYX_SKULL = ITEMS.register("sinosauropteryx_skull",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> ZYGOPHYSETER_SKULL = ITEMS.register("zygophyseter_skull",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
 
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",

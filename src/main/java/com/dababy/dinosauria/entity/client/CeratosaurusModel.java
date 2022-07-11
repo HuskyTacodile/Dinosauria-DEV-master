@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class CeratosaurusModel extends AnimatedGeoModel<CeratosaurusEntity> {
     @Override
-    public ResourceLocation getModelLocation(CeratosaurusEntity object) {
+    public ResourceLocation getModelResource(CeratosaurusEntity object) {
         return new ResourceLocation(DinosauriaMod.MOD_ID, "geo/ceratosaurus.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureLocation(CeratosaurusEntity entity)    {
+    public ResourceLocation getTextureResource(CeratosaurusEntity entity)    {
         return DilophosaurusRenderer.LOCATION_BY_VARIANT.get(entity.getVariant());
     }
 
     @Override
-    public ResourceLocation getAnimationFileLocation(CeratosaurusEntity animatable) {
+    public ResourceLocation getAnimationResource(CeratosaurusEntity animatable) {
         return new ResourceLocation(DinosauriaMod.MOD_ID, "animations/ceratosaurus.animation.json");
     }
 }
