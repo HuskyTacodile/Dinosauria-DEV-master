@@ -2,6 +2,7 @@ package com.dababy.dinosauria.entity;
 
 import com.dababy.dinosauria.DinosauriaMod;
 import com.dababy.dinosauria.entity.custom.CeratosaurusEntity;
+import com.dababy.dinosauria.entity.custom.DaspletosaurusEntity;
 import com.dababy.dinosauria.entity.custom.DilophosaurusEntity;
 import com.dababy.dinosauria.entity.custom.IrritatorEntity;
 import net.minecraft.resources.ResourceLocation;
@@ -14,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITIES, DinosauriaMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, DinosauriaMod.MOD_ID);
 
     public static final RegistryObject<EntityType<DilophosaurusEntity>> DILOPHOSAURUS = ENTITY_TYPES.register("dilophosaurus",
             () -> EntityType.Builder.of(DilophosaurusEntity::new, MobCategory.CREATURE)
@@ -30,6 +31,11 @@ public class ModEntityTypes {
             () -> EntityType.Builder.of(IrritatorEntity::new, MobCategory.CREATURE)
                     .sized(1.4f, 2.2f)
                     .build(new ResourceLocation(DinosauriaMod.MOD_ID, "irritator").toString()));
+
+    public static final RegistryObject<EntityType<DaspletosaurusEntity>> DASPLETOSAURUS = ENTITY_TYPES.register("daspletosaurus",
+            () -> EntityType.Builder.of(DaspletosaurusEntity::new, MobCategory.CREATURE)
+                    .sized(1.6f, 2.5f)
+                    .build(new ResourceLocation(DinosauriaMod.MOD_ID, "daspletosaurus").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

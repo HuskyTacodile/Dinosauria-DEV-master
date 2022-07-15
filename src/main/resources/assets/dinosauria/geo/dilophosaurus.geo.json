@@ -12,7 +12,17 @@
 			},
 			"bones": [
 				{
+					"name": "core",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "legscore",
+					"parent": "core",
+					"pivot": [0, 24.1, 2]
+				},
+				{
 					"name": "Thigright",
+					"parent": "legscore",
 					"pivot": [5, 24.1, 2],
 					"cubes": [
 						{"origin": [3, 15.1, -2.5], "size": [4, 13, 9], "uv": [0, 0]}
@@ -36,6 +46,7 @@
 				},
 				{
 					"name": "Thigleft",
+					"parent": "legscore",
 					"pivot": [-5, 24.1, 2],
 					"cubes": [
 						{"origin": [-7, 15.1, -2.5], "size": [4, 13, 9], "uv": [0, 42]}
@@ -59,7 +70,8 @@
 				},
 				{
 					"name": "Body",
-					"pivot": [0, 21.1, 5],
+					"parent": "core",
+					"pivot": [0, 24.1, 2],
 					"cubes": [
 						{"origin": [-4, 18.1, -20], "size": [8, 12, 30], "uv": [0, 0]}
 					]

@@ -65,6 +65,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.IRRITATOR,0x535353, 0xB8A840,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<ForgeSpawnEggItem> DASPLETOSAURUS_SPAWN_EGG = ITEMS.register("daspletosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.DASPLETOSAURUS,0x1C1D1F, 0x6397FF,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -139,19 +139,19 @@ public class DilophosaurusEntity extends TamableAnimal implements IAnimatable, I
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (!(animationSpeed > -0.10F && animationSpeed < 0.05F) && !this.isAggressive() && event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dilo.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", true));
             return PlayState.CONTINUE;
         }
         if (this.isAggressive() && !(this.dead || this.getHealth() < 0.01 || this.isDeadOrDying())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dilo.bite", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("bite", true));
             return PlayState.CONTINUE;
         }
         if (this.isSitting()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dilo.sit", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("sit", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.dilo.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", true));
 
         return PlayState.CONTINUE;
     }
@@ -187,7 +187,7 @@ public class DilophosaurusEntity extends TamableAnimal implements IAnimatable, I
         ItemStack itemstack = p_230254_1_.getItemInHand(p_230254_2_);
         Item item = itemstack.getItem();
         if (this.level.isClientSide) {
-            boolean flag = this.isOwnedBy(p_230254_1_) || this.isTame() || item == Items.NETHERITE_SWORD && !this.isTame();
+            boolean flag = this.isOwnedBy(p_230254_1_) || this.isTame() || item == Items.BEEF && !this.isTame();
             return flag ? InteractionResult.CONSUME : InteractionResult.PASS;
 
         } else {
@@ -206,7 +206,7 @@ public class DilophosaurusEntity extends TamableAnimal implements IAnimatable, I
                     return InteractionResult.SUCCESS;
                 }
                 p_230254_1_.startRiding(this);
-            } else if (item == Items.NETHERITE_SWORD && !this.isOnFire()) {
+            } else if (item == Items.BEEF && !this.isOnFire()) {
                 if (!p_230254_1_.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
@@ -279,7 +279,7 @@ public class DilophosaurusEntity extends TamableAnimal implements IAnimatable, I
             return false;
         } else {
             Player playerentity = (Player)entity;
-            return playerentity.getMainHandItem().getItem() == Items.NETHERITE_SWORD || playerentity.getOffhandItem().getItem() == Items.NETHERITE_SWORD;
+            return playerentity.getMainHandItem().getItem() == Items.STONE_SWORD || playerentity.getOffhandItem().getItem() == Items.STONE_SWORD;
         }
     }
     public void travel(Vec3 p_213352_1_) {
@@ -314,7 +314,7 @@ public class DilophosaurusEntity extends TamableAnimal implements IAnimatable, I
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.NETHERITE_SWORD), false));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.BEEF), false));
         this.goalSelector.addGoal(3, new RandomSwimmingGoal(this,0,1));
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.targetSelector.addGoal(5, new NonTameRandomTargetGoal<>(this, Animal.class, false, PREY_SELECTOR));

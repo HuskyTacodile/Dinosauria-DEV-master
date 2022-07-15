@@ -48,9 +48,9 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.function.Predicate;
 
-public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, ItemSteerable {
+public class DaspletosaurusEntity extends TamableAnimal implements IAnimatable, ItemSteerable {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT =
-            SynchedEntityData.defineId(CeratosaurusEntity.class, EntityDataSerializers.INT);
+            SynchedEntityData.defineId(DaspletosaurusEntity.class, EntityDataSerializers.INT);
     private AnimationFactory factory = new AnimationFactory(this);
     private static final EntityDataAccessor<Boolean> DATA_SADDLE_ID = SynchedEntityData.defineId(Pig.class, EntityDataSerializers.BOOLEAN);
     private final ItemBasedSteering steering = new ItemBasedSteering(this.entityData, DATA_BOOST_TIME,DATA_SADDLE_ID);
@@ -64,10 +64,10 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
                 entitytype == ModEntityTypes.IRRITATOR.get();
     };
     private static final EntityDataAccessor<Boolean> SITTING =
-            SynchedEntityData.defineId(CeratosaurusEntity.class, EntityDataSerializers.BOOLEAN);
+            SynchedEntityData.defineId(DaspletosaurusEntity.class, EntityDataSerializers.BOOLEAN);
 
 
-    public CeratosaurusEntity(EntityType<? extends TamableAnimal> p_i48575_1_, Level p_i48575_2_) {
+    public DaspletosaurusEntity(EntityType<? extends TamableAnimal> p_i48575_1_, Level p_i48575_2_) {
         super(p_i48575_1_, p_i48575_2_);
         this.setTame(false);
     }
@@ -144,7 +144,7 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
             return PlayState.CONTINUE;
         }
         if (this.isAggressive() && !(this.dead || this.getHealth() < 0.01 || this.isDeadOrDying())) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("headbutt", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("attack_bite", true));
             return PlayState.CONTINUE;
         }
         if (this.isSitting()) {
@@ -168,7 +168,7 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
 
     @Override
     public void registerControllers(AnimationData data) {
-        data.addAnimationController(new AnimationController<CeratosaurusEntity>
+        data.addAnimationController(new AnimationController<DaspletosaurusEntity>
                 (this, "controller", 0, this::predicate));
     }
 
@@ -179,16 +179,16 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
 
     public static AttributeSupplier.Builder attributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 45.00D)
+                .add(Attributes.MAX_HEALTH, 75.00D)
                 .add(Attributes.MOVEMENT_SPEED, 0.6D)
-                .add(Attributes.FOLLOW_RANGE, 20.0D)
-                .add(Attributes.ATTACK_DAMAGE, 7.0D);
+                .add(Attributes.FOLLOW_RANGE, 30.0D)
+                .add(Attributes.ATTACK_DAMAGE, 9.5D);
     }
     public InteractionResult mobInteract(Player p_230254_1_, InteractionHand p_230254_2_) {
         ItemStack itemstack = p_230254_1_.getItemInHand(p_230254_2_);
         Item item = itemstack.getItem();
         if (this.level.isClientSide) {
-            boolean flag = this.isOwnedBy(p_230254_1_) || this.isTame() || item == ModItems.DILOPHOSAURUS_CREST.get() && !this.isTame();
+            boolean flag = this.isOwnedBy(p_230254_1_) || this.isTame() || item == ModItems.IRRITATOR_SKULL.get() && !this.isTame();
             return flag ? InteractionResult.CONSUME : InteractionResult.PASS;
 
         } else {
@@ -207,7 +207,7 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
                     return InteractionResult.SUCCESS;
                 }
                 p_230254_1_.startRiding(this);
-            } else if (item == ModItems.DILOPHOSAURUS_CREST.get() && !this.isOnFire()) {
+            } else if (item == ModItems.IRRITATOR_SKULL.get() && !this.isOnFire()) {
                 if (!p_230254_1_.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
@@ -280,7 +280,7 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
             return false;
         } else {
             Player playerentity = (Player)entity;
-            return playerentity.getMainHandItem().getItem() == Items.IRON_SWORD || playerentity.getOffhandItem().getItem() == Items.IRON_SWORD;
+            return playerentity.getMainHandItem().getItem() == Items.DIAMOND_SWORD || playerentity.getOffhandItem().getItem() == Items.DIAMOND_SWORD;
         }
     }
     public void travel(Vec3 p_213352_1_) {
@@ -315,7 +315,7 @@ public class CeratosaurusEntity extends TamableAnimal implements IAnimatable, It
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
         this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.DILOPHOSAURUS_CREST.get()), false));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(ModItems.IRRITATOR_SKULL.get()), false));
         this.goalSelector.addGoal(3, new RandomSwimmingGoal(this,0,1));
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.targetSelector.addGoal(5, new NonTameRandomTargetGoal<>(this, Animal.class, false, PREY_SELECTOR));

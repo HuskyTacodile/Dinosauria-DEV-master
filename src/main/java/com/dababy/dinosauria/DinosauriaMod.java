@@ -3,6 +3,7 @@ package com.dababy.dinosauria;
 import com.dababy.dinosauria.block.ModBlocks;
 import com.dababy.dinosauria.entity.ModEntityTypes;
 import com.dababy.dinosauria.entity.client.CeratosaurusRenderer;
+import com.dababy.dinosauria.entity.client.DaspletosaurusRenderer;
 import com.dababy.dinosauria.entity.client.DilophosaurusRenderer;
 import com.dababy.dinosauria.entity.client.IrritatorRenderer;
 import com.dababy.dinosauria.item.ModItems;
@@ -46,6 +47,7 @@ public class DinosauriaMod {
         EntityRenderers.register(ModEntityTypes.DILOPHOSAURUS.get(), DilophosaurusRenderer::new);
         EntityRenderers.register(ModEntityTypes.CERATOSAURUS.get(), CeratosaurusRenderer::new);
         EntityRenderers.register(ModEntityTypes.IRRITATOR.get(), IrritatorRenderer::new);
+        EntityRenderers.register(ModEntityTypes.DASPLETOSAURUS.get(), DaspletosaurusRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
