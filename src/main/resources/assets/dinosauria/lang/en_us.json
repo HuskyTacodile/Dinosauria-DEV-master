@@ -5,12 +5,26 @@
   "item.dinosauria.dilophosaurus_spawn_egg": "Dilophosaurus Spawn Egg",
   "item.dinosauria.ceratosaurus_spawn_egg": "Ceratosaurus Spawn Egg",
   "item.dinosauria.irritator_spawn_egg": "Irritator Spawn Egg",
+  "item.dinosauria.ankylosaurus_skull": "Ankylosaurus Skull",
+  "item.dinosauria.anteosaurus_skull": "Anteosaurus Skull",
+  "item.dinosauria.ceratosaurus_skull": "Ceratosaurus Skull",
+  "item.dinosauria.daspletosaurus_skull": "Daspletosaurus Skull",
+  "item.dinosauria.deinonychus_skull": "Deninonychus Skull",
+  "item.dinosauria.gryposaurus_skull": "Gryposaurus Skull",
+  "item.dinosauria.irritator_skull": "Irritator Skull",
+  "item.dinosauria.pentaceratops_skull": "Pentaceratops Skull",
+  "item.dinosauria.pliosaurus_skull": "Pliosaurus Skull",
+  "item.dinosauria.sinosauropteryx_skull": "Sinosauropteryx Skull",
+  "item.dinosauria.zygophyseter_skull": "Zygophyseter Skull",
+  "item.dinosauria.daspletosaurus_spawn_egg": "Daspletosaurus Spawn Egg",
 
   "block.dinosauria.cycad_planks": "Cycad Planks",
   "block.dinosauria.cycad_log": "Cycad Log",
   "block.dinosauria.stripped_cycad_log": "Stripped Cycad Log",
   "block.dinosauria.stripped_cycad_wood": "Stripped Cycad Wood",
   "block.dinosauria.cycad_wood": "Cycad Wood",
+
+
 
   "itemGroup.dinosauriaitems": "Dinosauria - Items",
   "itemGroup.dinosauriablocks": "Dinosauria - Blocks"
