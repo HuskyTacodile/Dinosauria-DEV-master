@@ -18,6 +18,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -179,10 +180,11 @@ public class DaspletosaurusEntity extends TamableAnimal implements IAnimatable, 
 
     public static AttributeSupplier.Builder attributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 75.00D)
+                .add(Attributes.MAX_HEALTH, 45.00D)
                 .add(Attributes.MOVEMENT_SPEED, 0.6D)
                 .add(Attributes.FOLLOW_RANGE, 30.0D)
-                .add(Attributes.ATTACK_DAMAGE, 9.5D);
+                .add(Attributes.ARMOR_TOUGHNESS,1.0D)
+                .add(Attributes.ATTACK_DAMAGE, 7.5D);
     }
     public InteractionResult mobInteract(Player p_230254_1_, InteractionHand p_230254_2_) {
         ItemStack itemstack = p_230254_1_.getItemInHand(p_230254_2_);
