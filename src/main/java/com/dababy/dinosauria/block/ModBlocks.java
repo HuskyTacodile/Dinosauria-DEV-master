@@ -6,14 +6,17 @@ import com.dababy.dinosauria.item.ModCreativeModeTab;
 import com.dababy.dinosauria.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -59,6 +62,23 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
                     .strength(3f)), ModCreativeModeTab.DINOSAURIA_BLOCKS);
 
+    public static final RegistryObject<Block> METAMORPHIC_STONE = registerBlock("metamorphic_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.DINOSAURIA_BLOCKS);
+
+    public static final RegistryObject<Block> METAMORPHIC_STONE_FOSSIL = registerBlock("metamorphic_stone_fossil",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),UniformInt.of(3,7)),
+            ModCreativeModeTab.DINOSAURIA_BLOCKS);
+
+    public static final RegistryObject<Block> SEDIMENTARY_STONE = registerBlock("sedimentary_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.DINOSAURIA_BLOCKS);
+
+    public static final RegistryObject<Block> SEDIMENTARY_STONE_FOSSIL = registerBlock("sedimentary_stone_fossil",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)),
+            ModCreativeModeTab.DINOSAURIA_BLOCKS);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
