@@ -2,6 +2,8 @@ package com.dababy.dinosauria.item;
 
 import com.dababy.dinosauria.DinosauriaMod;
 import com.dababy.dinosauria.entity.ModEntityTypes;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -49,6 +51,36 @@ public class ModItems {
 
     public static final RegistryObject<Item> ZYGOPHYSETER_SKULL = ITEMS.register("zygophyseter_skull",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
+
+    public static final RegistryObject<Item> BIG_THEROPOD_MEAT_COOKED = ITEMS.register("big_theropod_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_BEEF)));
+
+    public static final RegistryObject<Item> BIG_LIZARD_MEAT = ITEMS.register("big_lizard_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.PORKCHOP)));
+
+    public static final RegistryObject<Item> BIG_LIZARD_MEAT_COOKED = ITEMS.register("big_lizard_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_PORKCHOP)));
+
+    public static final RegistryObject<Item> BIG_ORNITHICIAN_MEAT = ITEMS.register("big_ornithican_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.MUTTON)));
+
+    public static final RegistryObject<Item> BIG_ORNITHICIAN_MEAT_COOKED = ITEMS.register("big_ornithician_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_MUTTON)));
+
+    public static final RegistryObject<Item> BIG_SAURO_MEAT = ITEMS.register("big_sauro_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.BEEF)));
+
+    public static final RegistryObject<Item> BIG_SAURO_MEAT_COOKED = ITEMS.register("big_sauro_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_BEEF)));
+
+    public static final RegistryObject<Item> BIG_SYNAP_MEAT = ITEMS.register("big_synap_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.MUTTON)));
+
+    public static final RegistryObject<Item> BIG_SYNAP_MEAT_COOKED = ITEMS.register("big_synap_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_MUTTON)));
+
+    public static final RegistryObject<Item> BIG_THEROPOD_MEAT = ITEMS.register("big_theropod_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.BEEF)));
 
     public static final RegistryObject<Item> LAND_FOSSIL = ITEMS.register("land_fossil",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(64)));
