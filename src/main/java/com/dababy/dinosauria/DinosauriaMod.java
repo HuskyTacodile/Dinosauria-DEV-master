@@ -8,9 +8,9 @@ import com.dababy.dinosauria.entity.client.DilophosaurusRenderer;
 import com.dababy.dinosauria.entity.client.IrritatorRenderer;
 import com.dababy.dinosauria.item.ModItems;
 import com.dababy.dinosauria.world.feature.ModConfiguredFeatures;
+import com.dababy.dinosauria.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -37,6 +37,7 @@ public class DinosauriaMod {
 
         ModEntityTypes.register(eventBus);
         ModConfiguredFeatures.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
