@@ -50,6 +50,12 @@ public class ModItems {
     public static final RegistryObject<Item> ZYGOPHYSETER_SKULL = ITEMS.register("zygophyseter_skull",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(1)));
 
+    public static final RegistryObject<Item> LAND_FOSSIL = ITEMS.register("land_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(64)));
+
+    public static final RegistryObject<Item> MARINE_FOSSIL = ITEMS.register("marine_fossil",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(64)));
+
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(2)));
 
