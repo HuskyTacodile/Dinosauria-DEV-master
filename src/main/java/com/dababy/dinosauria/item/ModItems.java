@@ -61,7 +61,7 @@ public class ModItems {
     public static final RegistryObject<Item> BIG_LIZARD_MEAT_COOKED = ITEMS.register("big_lizard_meat_cooked",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_PORKCHOP)));
 
-    public static final RegistryObject<Item> BIG_ORNITHICIAN_MEAT = ITEMS.register("big_ornithican_meat",
+    public static final RegistryObject<Item> BIG_ORNITHICIAN_MEAT = ITEMS.register("big_ornithician_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.MUTTON)));
 
     public static final RegistryObject<Item> BIG_ORNITHICIAN_MEAT_COOKED = ITEMS.register("big_ornithician_meat_cooked",
@@ -80,6 +80,36 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_MUTTON)));
 
     public static final RegistryObject<Item> BIG_THEROPOD_MEAT = ITEMS.register("big_theropod_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.BEEF)));
+
+    public static final RegistryObject<Item> MID_THEROPOD_MEAT_COOKED = ITEMS.register("mid_theropod_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_BEEF)));
+
+    public static final RegistryObject<Item> MID_LIZARD_MEAT = ITEMS.register("mid_lizard_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.PORKCHOP)));
+
+    public static final RegistryObject<Item> MID_LIZARD_MEAT_COOKED = ITEMS.register("mid_lizard_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_PORKCHOP)));
+
+    public static final RegistryObject<Item> MID_ORNITHICIAN_MEAT = ITEMS.register("mid_ornithician_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.MUTTON)));
+
+    public static final RegistryObject<Item> MID_ORNITHICIAN_MEAT_COOKED = ITEMS.register("mid_ornithician_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_MUTTON)));
+
+    public static final RegistryObject<Item> MID_SAURO_MEAT = ITEMS.register("mid_sauro_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.BEEF)));
+
+    public static final RegistryObject<Item> MID_SAURO_MEAT_COOKED = ITEMS.register("mid_sauro_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_BEEF)));
+
+    public static final RegistryObject<Item> MID_SYNAP_MEAT = ITEMS.register("mid_synap_meat",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.MUTTON)));
+
+    public static final RegistryObject<Item> MID_SYNAP_MEAT_COOKED = ITEMS.register("mid_synap_meat_cooked",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.COOKED_MUTTON)));
+
+    public static final RegistryObject<Item> MID_THEROPOD_MEAT = ITEMS.register("mid_theropod_meat",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).food(Foods.BEEF)));
 
     public static final RegistryObject<Item> LAND_FOSSIL = ITEMS.register("land_fossil",
