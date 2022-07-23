@@ -49,6 +49,10 @@
   "item.dinosauria.small_synap_meat": "Raw Small Synap Meat",
   "item.dinosauria.small_synap_meat_cooked": "Cooked Small Synap Meat",
   "item.dinosauria.small_theropod_meat": "Raw Small Theropod Meat",
+  "item.dinosauria.daspletosaurus_material": "Daspletosaurus Material",
+  "item.dinosauria.daspletosaurus_tooth": "Daspletosaurus Tooth",
+  "item.dinosauria.daspletosaurus_jaw": "Daspletosaurus Jaw",
+  "item.dinosauria.daspletosaurus_crest": "Daspletosaurus Crest",
 
   "block.dinosauria.cycad_planks": "Cycad Planks",
   "block.dinosauria.cycad_log": "Cycad Log",
