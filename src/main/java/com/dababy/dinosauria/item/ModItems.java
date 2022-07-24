@@ -160,6 +160,18 @@ public class ModItems {
     public static final RegistryObject<Item> DASPLETOSAURUS_CREST = ITEMS.register("daspletosaurus_crest",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
 
+    public static final RegistryObject<Item> CERATOSAURUS_MATERIAL = ITEMS.register("ceratosaurus_material",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> CERATOSAURUS_TEETH = ITEMS.register("ceratosaurus_teeth",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> CERATOSAURUS_OSTEODERM = ITEMS.register("ceratosaurus_osteoderm",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> CERATOSAURUS_CREST = ITEMS.register("ceratosaurus_crest",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(2)));
 
