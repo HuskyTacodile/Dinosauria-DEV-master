@@ -22,28 +22,19 @@ public class DaspletosaurusRenderer extends GeoEntityRenderer<DaspletosaurusEnti
     }
 
     public static final Map<QuintupleVariant, ResourceLocation> LOCATION_BY_VARIANT =
-            Util.make(Maps.newEnumMap(QuintupleVariant.class), (p_114874_) -> {
-                p_114874_.put(QuintupleVariant.VARIANT1, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_1.png"));
-                p_114874_.put(QuintupleVariant.VARIANT2, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_2.png"));
-                p_114874_.put(QuintupleVariant.VARIANT3, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_3.png"));
-                p_114874_.put(QuintupleVariant.VARIANT4, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_1.png"));
-                p_114874_.put(QuintupleVariant.VARIANT5, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_2.png"));
-                p_114874_.put(QuintupleVariant.VARIANT6, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_3.png"));
-                p_114874_.put(QuintupleVariant.VARIANT7, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_1.png"));
-                p_114874_.put(QuintupleVariant.VARIANT8, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_2.png"));
-                p_114874_.put(QuintupleVariant.VARIANT9, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_3.png"));
-                p_114874_.put(QuintupleVariant.VARIANT10, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_1.png"));
-                p_114874_.put(QuintupleVariant.VARIANT11, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_2.png"));
-                p_114874_.put(QuintupleVariant.VARIANT12, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_3.png"));
-                p_114874_.put(QuintupleVariant.VARIANT13, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_1.png"));
-                p_114874_.put(QuintupleVariant.VARIANT14, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_2.png"));
-                p_114874_.put(QuintupleVariant.VARIANT15, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_3.png"));
-                p_114874_.put(QuintupleVariant.VARIANT16, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_1.png"));
-                p_114874_.put(QuintupleVariant.VARIANT17, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_2.png"));
-                p_114874_.put(QuintupleVariant.VARIANT18, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_morph_3.png"));
-                p_114874_.put(QuintupleVariant.MELON, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/melanistic_daspletosaurus.png"));
-                p_114874_.put(QuintupleVariant.MELON2, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/melanistic_daspletosaurus.png"));
-                p_114874_.put(QuintupleVariant.ALBINO, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/albino_daspletosaurus.png"));
+            Util.make(Maps.newEnumMap(QuintupleVariant.class), (resourceLocationEnumMap) -> {
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT1, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_dark_oakmorph_1.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT2, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_dark_oak_morph_2.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT3, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_dark_oak_morph_3.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT4, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_jungle_morph_1.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT5, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_jungle_morph_2.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT6, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_jungle_morph_3.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT7, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_flower_forest_morph_1.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT8, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_flower_forest_morph_2.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.VARIANT9, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_flower_forest_morph_3.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.MELON, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_melanistic_morph_1.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.MELON2, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_melanistic_morph_2.png"));
+                resourceLocationEnumMap.put(QuintupleVariant.ALBINO, new ResourceLocation("dinosauria:textures/entity/daspletosaurus/daspletosaurus_albino.png"));
             });
     @Override
     public ResourceLocation getTextureLocation(DaspletosaurusEntity entity) {
