@@ -32,6 +32,8 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class IrritatorEntity extends Animal implements IAnimatable {
+
+    private boolean isBasking;
     private AnimationFactory factory = new AnimationFactory(this);
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT =
             SynchedEntityData.defineId(IrritatorEntity.class, EntityDataSerializers.INT);
@@ -57,6 +59,10 @@ public class IrritatorEntity extends Animal implements IAnimatable {
         }
         if (this.isSwimming() && !(animationSpeed > -0.10F && animationSpeed < 0.05F) && !this.isAggressive()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.irritator.walk", true));
+            return PlayState.CONTINUE;
+        }
+        if (isBasking()){
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("bask", true));
             return PlayState.CONTINUE;
         }
 
@@ -190,5 +196,9 @@ public class IrritatorEntity extends Animal implements IAnimatable {
     @Override
     public AnimationFactory getFactory() {
         return factory;
+    }
+
+    public boolean isBasking() {
+        return this.getSharedFlag(3);
     }
 }
