@@ -29,10 +29,10 @@ public enum QuintupleVariant {
 
 
     private static final QuintupleVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.
-            comparingInt(QuintupleVariant::getId)).toArray((i) -> new QuintupleVariant[i]);
+            comparingInt(QuintupleVariant::getId)).toArray(QuintupleVariant[]::new);
     private final int id;
 
-    private QuintupleVariant(int p_30984_) {
+    QuintupleVariant(int p_30984_) {
         this.id = p_30984_;
     }
 
