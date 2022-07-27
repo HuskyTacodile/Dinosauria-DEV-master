@@ -1,5 +1,7 @@
 package com.dababy.dinosauria.entity.custom;
 
+import com.dababy.dinosauria.entity.TamableDino;
+import com.dababy.dinosauria.entity.ai.NocturnalSleepGoal;
 import com.dababy.dinosauria.entity.variant.IrritatingVariant;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
@@ -31,13 +33,13 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class IrritatorEntity extends Animal implements IAnimatable {
+public class IrritatorEntity extends TamableDino implements IAnimatable {
 
     private boolean isBasking;
     private AnimationFactory factory = new AnimationFactory(this);
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT =
             SynchedEntityData.defineId(IrritatorEntity.class, EntityDataSerializers.INT);
-    public IrritatorEntity(EntityType<? extends Animal> entityType, Level level) {
+    public IrritatorEntity(EntityType<? extends TamableDino> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -63,6 +65,10 @@ public class IrritatorEntity extends Animal implements IAnimatable {
         }
         if (isBasking()){
             event.getController().setAnimation(new AnimationBuilder().addAnimation("bask", true));
+            return PlayState.CONTINUE;
+        }
+        if (this.isAsleep() || this.getHealth() < 0.01 || this.isDeadOrDying()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("sleep", true));
             return PlayState.CONTINUE;
         }
 
@@ -156,6 +162,7 @@ public class IrritatorEntity extends Animal implements IAnimatable {
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
+        this.goalSelector.addGoal(7,new NocturnalSleepGoal(this));
     }
 
     @Nullable

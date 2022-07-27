@@ -1,6 +1,8 @@
 package com.dababy.dinosauria.entity.custom;
 
 import com.dababy.dinosauria.entity.ModEntityTypes;
+import com.dababy.dinosauria.entity.TamableDino;
+import com.dababy.dinosauria.entity.ai.DiurnalSleepGoal;
 import com.dababy.dinosauria.entity.variant.QuintupleVariant;
 import com.dababy.dinosauria.item.ModItems;
 import net.minecraft.Util;
@@ -49,7 +51,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.function.Predicate;
 
-public class DaspletosaurusEntity extends TamableAnimal implements IAnimatable, ItemSteerable {
+public class DaspletosaurusEntity extends TamableDino implements IAnimatable, ItemSteerable {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE_VARIANT =
             SynchedEntityData.defineId(DaspletosaurusEntity.class, EntityDataSerializers.INT);
     private AnimationFactory factory = new AnimationFactory(this);
@@ -150,6 +152,10 @@ public class DaspletosaurusEntity extends TamableAnimal implements IAnimatable, 
         }
         if (this.isSitting()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("sit", true));
+            return PlayState.CONTINUE;
+        }
+        if (this.isAsleep() || this.getHealth() < 0.01 || this.isDeadOrDying()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("sleep", true));
             return PlayState.CONTINUE;
         }
 
@@ -321,6 +327,7 @@ public class DaspletosaurusEntity extends TamableAnimal implements IAnimatable, 
         this.goalSelector.addGoal(3, new RandomSwimmingGoal(this,0,1));
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.targetSelector.addGoal(5, new NonTameRandomTargetGoal<>(this, Animal.class, false, PREY_SELECTOR));
+        this.goalSelector.addGoal(7,new DiurnalSleepGoal(this));
     }
     @Nullable
     @Override
