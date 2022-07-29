@@ -181,6 +181,15 @@ public class ModItems {
     public static final RegistryObject<Item> PENTACERATOPS_FRILL_PIECE = ITEMS.register("pentaceratops_frill_piece",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
 
+    public static final RegistryObject<Item> DEINONYCHUS_MATERIAL = ITEMS.register("deinonychus_material",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> DEINONYCHUS_SICKLE_CLAW = ITEMS.register("deinonychus_sickle_claw",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> DEINONYCHUS_FEATHER = ITEMS.register("deinonychus_feather",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(2)));
 
