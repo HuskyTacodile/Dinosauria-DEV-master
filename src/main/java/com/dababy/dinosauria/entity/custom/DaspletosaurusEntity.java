@@ -158,6 +158,10 @@ public class DaspletosaurusEntity extends TamableDino implements IAnimatable, It
             event.getController().setAnimation(new AnimationBuilder().addAnimation("sleep", true));
             return PlayState.CONTINUE;
         }
+        if (this.getKnockedOut()) {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("sleep", true));
+            return PlayState.CONTINUE;
+        }
 
         event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", true));
 
@@ -275,6 +279,10 @@ public class DaspletosaurusEntity extends TamableDino implements IAnimatable, It
     }
 
     protected void playStepSound(BlockPos p_180429_1_, BlockState p_180429_2_) {
+    }
+
+    public boolean getKnockedOut(){
+        return this.getHealth() <= this.getMaxHealth() / 5.0f;
     }
 
     @javax.annotation.Nullable

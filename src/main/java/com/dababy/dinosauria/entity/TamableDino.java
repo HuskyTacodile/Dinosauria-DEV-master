@@ -27,13 +27,16 @@ public abstract class TamableDino extends TamableAnimal implements OwnableEntity
 
     private static final EntityDataAccessor<Boolean> ASLEEP = SynchedEntityData.defineId(TamableDino.class, EntityDataSerializers.BOOLEAN);
 
+    private static final EntityDataAccessor<Boolean> KNOCKED_OUT = SynchedEntityData.defineId(TamableDino.class, EntityDataSerializers.BOOLEAN);
+
+
     protected static final EntityDataAccessor<Byte> DATA_FLAGS_ID = SynchedEntityData.defineId(net.minecraft.world.entity.TamableAnimal.class, EntityDataSerializers.BYTE);
     protected static final EntityDataAccessor<Optional<UUID>> DATA_OWNERUUID_ID = SynchedEntityData.defineId(net.minecraft.world.entity.TamableAnimal.class, EntityDataSerializers.OPTIONAL_UUID);
     protected boolean isGrow;
     private boolean orderedToSit;
 
-    protected TamableDino(EntityType<? extends net.minecraft.world.entity.TamableAnimal> p_21803_, Level p_21804_) {
-        super(p_21803_, p_21804_);
+    protected TamableDino(EntityType<? extends net.minecraft.world.entity.TamableAnimal> entityType, Level aSuper) {
+        super(entityType, aSuper);
         this.reassessTameGoals();
     }
 
@@ -42,12 +45,17 @@ public abstract class TamableDino extends TamableAnimal implements OwnableEntity
         this.entityData.define(DATA_FLAGS_ID, (byte)0);
         this.entityData.define(DATA_OWNERUUID_ID, Optional.empty());
         this.entityData.define(ASLEEP, false);
+        this.entityData.define(KNOCKED_OUT, false);
+
 
     }
 
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putBoolean("IsAsleep", this.isAsleep());
+
+        tag.putBoolean("IsKnockedOut", this.isKnockedOut());
+
 
         if (this.getOwnerUUID() != null) {
             tag.putUUID("Owner", this.getOwnerUUID());
@@ -60,6 +68,9 @@ public abstract class TamableDino extends TamableAnimal implements OwnableEntity
         super.readAdditionalSaveData(tag);
         UUID uuid;
         this.entityData.set(ASLEEP, tag.getBoolean("IsAsleep"));
+
+        this.entityData.set(KNOCKED_OUT, tag.getBoolean("IsKnockedOut"));
+
 
         if (tag.hasUUID("Owner")) {
             uuid = tag.getUUID("Owner");
@@ -248,9 +259,21 @@ public abstract class TamableDino extends TamableAnimal implements OwnableEntity
         return this.entityData.get(ASLEEP);
     }
 
+
+
+    public boolean isKnockedOut() {
+        return this.entityData.get(KNOCKED_OUT);
+    }
+
+
     public void setAsleep(boolean isAsleep) {
         this.entityData.set(ASLEEP, isAsleep);
     }
+
+    public void setKnockedOut(boolean isKnockedOut) {
+        this.entityData.set(KNOCKED_OUT, isKnockedOut);
+    }
+
 
 
 

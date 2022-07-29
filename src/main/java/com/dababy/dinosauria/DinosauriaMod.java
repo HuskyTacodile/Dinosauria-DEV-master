@@ -1,6 +1,7 @@
 package com.dababy.dinosauria;
 
 import com.dababy.dinosauria.block.ModBlocks;
+import com.dababy.dinosauria.effect.ModEffect;
 import com.dababy.dinosauria.entity.ModEntityTypes;
 import com.dababy.dinosauria.entity.client.CeratosaurusRenderer;
 import com.dababy.dinosauria.entity.client.DaspletosaurusRenderer;
@@ -34,6 +35,7 @@ public class DinosauriaMod {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModEffect.register(eventBus);
 
         ModEntityTypes.register(eventBus);
         ModConfiguredFeatures.register(eventBus);

@@ -71,6 +71,8 @@
   "block.dinosauria.sedimentary_stone": "Sedimentary Stone",
   "block.dinosauria.sedimentary_stone_fossil": "Sedimentary Stone Fossil",
 
+  "effect.dinosauria.sleep": "Sleeping",
+
 
 
   "itemGroup.dinosauriaitems": "Dinosauria - Items",
