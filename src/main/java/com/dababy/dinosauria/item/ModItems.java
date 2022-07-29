@@ -230,7 +230,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
 
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(2)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> DILOPHOSAURUS_MATERIAL = ITEMS.register("dilophosaurus_material",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> DILOPHOSAURUS_TEETH = ITEMS.register("dilophosaurus_teeth",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
 
     public static final RegistryObject<ForgeSpawnEggItem> DILOPHOSAURUS_SPAWN_EGG = ITEMS.register("dilophosaurus_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.DILOPHOSAURUS,0x526C4B, 0x565656,
