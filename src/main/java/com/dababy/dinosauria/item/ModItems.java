@@ -217,6 +217,18 @@ public class ModItems {
     public static final RegistryObject<Item> SPINOSAURUS_SAIL_PIECE = ITEMS.register("spinosaurus_sail_piece",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
 
+    public static final RegistryObject<Item> NEOVENATOR_TAIL = ITEMS.register("neovenator_tail",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> NEOVENATOR_MATERIAL = ITEMS.register("neovenator_material",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> NEOVENATOR_JAW_PIECE = ITEMS.register("neovenator_jaw_piece",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> NEOVENATOR_TEETH = ITEMS.register("neovenator_teeth",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(2)));
 
