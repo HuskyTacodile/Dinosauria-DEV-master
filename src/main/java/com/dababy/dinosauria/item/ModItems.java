@@ -202,6 +202,21 @@ public class ModItems {
     public static final RegistryObject<Item> IRRITATOR_TAIL_FIN = ITEMS.register("irritator_tail_fin",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
 
+    public static final RegistryObject<Item> SPINOSAURUS_MATERIAL = ITEMS.register("spinosaurus_material",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> SPINOSAURUS_TAIL_FIN = ITEMS.register("spinosaurus_tail_fin",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> SPINOSAURUS_CLAW = ITEMS.register("spinosaurus_claw",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> SPINOSAURUS_TEETH = ITEMS.register("spinosaurus_teeth",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
+    public static final RegistryObject<Item> SPINOSAURUS_SAIL_PIECE = ITEMS.register("spinosaurus_sail_piece",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS)));
+
     public static final RegistryObject<Item> DILOPHOSAURUS_CREST = ITEMS.register("dilophosaurus_crest",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DINOSAURIA_ITEMS).stacksTo(2)));
 
